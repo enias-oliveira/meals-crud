@@ -11,13 +11,14 @@ in mkShell {
     (with darwin.apple_sdk.frameworks; [ CoreFoundation CoreServices ]);
 
   shellHook = ''
+    export LANG="en_US.UTF-8"
+
+    export PGDATA=$PWD/db
     export PGHOST=$PWD/postgres
-    export PGDATA=$PWD/postgres_data
     export PGDATABASE=postgres
     export PGPORT=5433
 
     export DATABASE_URL="postgresql:///$PGDATABASE?host=$PGHOST&port=$PGPORT"
-
     export LOG_PATH=$PWD/postgres/LOG
 
     if [ ! -d $PGHOST ]; then
@@ -28,8 +29,11 @@ in mkShell {
       initdb --auth=trust --no-locale --encoding=UTF8
     fi
 
-    postgres_start() {
-      pg_ctl start -l $LOG_PATH -o "-c unix_socket_directories='$PGHOST'"
+    postgres_startup() {
+      if ! pg_ctl status
+      then
+        pg_ctl start -l $LOG_PATH -o "-c unix_socket_directories='$PGHOST'"
+      fi
     }
   '';
 }

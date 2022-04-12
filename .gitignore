@@ -11,4 +11,4 @@ erl_crash.dump
 .direnv/
 .envrc
 postgres/
-postgres_data/
+db/

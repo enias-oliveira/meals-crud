@@ -77,16 +77,24 @@ defmodule Exmeal.MealsControllerTest do
 
       id = meal.id
 
+      updated_params = %{
+        meal: %{
+          description: "Batata",
+          date: "2001-05-03",
+          calories: "15"
+        }
+      }
+
       response =
         conn
-        |> put(Routes.meals_path(conn, :update, id))
+        |> put(Routes.meals_path(conn, :update, id, updated_params))
         |> json_response(:ok)
 
       assert %{
                "meal" => %{
-                 "calories" => 20,
-                 "date" => "2001-05-02",
-                 "description" => "Banana",
+                 "calories" => 15,
+                 "date" => "2001-05-03",
+                 "description" => "Batata",
                  "id" => _id
                }
              } = response

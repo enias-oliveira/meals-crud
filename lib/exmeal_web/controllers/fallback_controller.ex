@@ -8,6 +8,6 @@ defmodule ExmealWeb.FallbackController do
     conn
     |> put_status(status)
     |> put_view(ErrorView)
-    |> render("error.json", result: result)
+    |> render("error.json", %{status: status, result: result})
   end
 end

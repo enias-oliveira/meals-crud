@@ -72,10 +72,15 @@ defmodule Exmeal.Products do
       {:error, %Ecto.Changeset{}}
 
   """
-  def update_meal(%Meal{} = meal, attrs) do
-    meal
-    |> Meal.changeset(attrs)
-    |> Repo.update()
+  def update_meal(%{"id" => id} = attrs) do
+    try do
+      id
+      |> get_meal!()
+      |> Meal.changeset(attrs)
+      |> Repo.update()
+    rescue
+      _ in Ecto.NoResultsError -> {:error, %Error{status: :not_found, result: "Meal not found"}}
+    end
   end
 
   @doc """
@@ -90,8 +95,12 @@ defmodule Exmeal.Products do
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete_meal(%Meal{} = meal) do
-    Repo.delete(meal)
+  def delete_meal(id) do
+    try do
+      get_meal!(id) |> Repo.delete()
+    rescue
+      _ in Ecto.NoResultsError -> {:error, %Error{status: :not_found, result: "Meal not found"}}
+    end
   end
 
   @doc """
@@ -105,5 +114,13 @@ defmodule Exmeal.Products do
   """
   def change_meal(%Meal{} = meal, attrs \\ %{}) do
     Meal.changeset(meal, attrs)
+  end
+
+  def get_meal_by_id(id) do
+    try do
+      {:ok, get_meal!(id)}
+    rescue
+      _ in Ecto.NoResultsError -> {:error, %Error{status: :not_found, result: "Meal not found"}}
+    end
   end
 end

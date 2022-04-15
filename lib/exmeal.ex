@@ -1,11 +1,8 @@
 defmodule Exmeal do
-  alias Exmeal.Meals.Create, as: CreateMeal
-  alias Exmeal.Meals.Delete, as: DeleteMeal
-  alias Exmeal.Meals.Get, as: GetMeal
-  alias Exmeal.Meals.Update, as: UpdateMeal
+  alias Exmeal.Products
 
-  defdelegate create_meal(params), to: CreateMeal, as: :call
-  defdelegate delete_meal(params), to: DeleteMeal, as: :call
-  defdelegate get_meal_by_id(params), to: GetMeal, as: :by_id
-  defdelegate update_meal(params), to: UpdateMeal, as: :call
+  defdelegate create_meal(params), to: Products, as: :create_meal
+  defdelegate delete_meal(params), to: Products, as: :delete_meal
+  defdelegate get_meal_by_id(params), to: Products, as: :get_meal_by_id
+  defdelegate update_meal(params), to: Products, as: :update_meal
 end

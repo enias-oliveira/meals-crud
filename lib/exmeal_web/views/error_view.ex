@@ -22,8 +22,20 @@ defmodule ExmealWeb.ErrorView do
     %{message: translate_errors(result)}
   end
 
+  def render("error.json", %{status: :not_found, result: result}) do
+    %{message: "Meal not found"}
+  end
+
   def render("error.json", %{result: result}) do
     %{message: result}
+  end
+
+  def render("404.json", _) do
+    %{errors: %{detail: "Not Found"}}
+  end
+
+  def render("500.json", _) do
+    %{errors: %{detail: "Internal Server Error"}}
   end
 
   def translate_errors(changeset) do

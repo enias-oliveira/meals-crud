@@ -23,7 +23,7 @@ defmodule ExmealWeb.ErrorView do
   end
 
   def render("error.json", %{status: :not_found, result: result}) do
-    %{message: "Meal not found"}
+    %{message: result}
   end
 
   def render("error.json", %{result: result}) do

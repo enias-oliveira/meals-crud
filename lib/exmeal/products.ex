@@ -1,13 +1,12 @@
 defmodule Exmeal.Products do
-  alias Exmeal.Error
-
   @moduledoc """
   The Products context.
   """
 
   import Ecto.Query, warn: false
-  alias Exmeal.Repo
 
+  alias Exmeal.Repo
+  alias Exmeal.Error
   alias Exmeal.Meal
 
   @doc """

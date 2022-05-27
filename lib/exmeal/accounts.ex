@@ -94,8 +94,11 @@ defmodule Exmeal.Accounts do
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete_user(%User{} = user) do
-    Repo.delete(user)
+  def delete_user(id) do
+    case get_user_by_id(id) do
+      {:ok, user} -> Repo.delete(user)
+      error -> error
+    end
   end
 
   @doc """

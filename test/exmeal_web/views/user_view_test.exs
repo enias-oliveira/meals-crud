@@ -7,23 +7,21 @@ defmodule ExmealWeb.UsersViewTest do
 
   alias Exmeal.User
 
-  alias ExmealWeb.UsersView
+  alias ExmealWeb.UserView
 
   test "render create.json" do
     user_params = build(:users_params)
 
     {:ok, %User{id: id} = user} = Exmeal.create_user(user_params)
 
-    response = render(UsersView, "create.json", user: user)
+    response = render(UserView, "create.json", user: user)
 
     assert %{
-             user: %{
-               user: %User{
-                 cpf: "12345678900",
-                 name: "Jp",
-                 email: "jp@banana.com",
-                 id: ^id
-               }
+             user: %User{
+               cpf: "12345678900",
+               name: "Jp",
+               email: "jp@banana.com",
+               id: ^id
              },
              message: "User created!"
            } = response
@@ -34,7 +32,7 @@ defmodule ExmealWeb.UsersViewTest do
 
     {:ok, %User{id: id} = user} = Exmeal.create_user(user_params)
 
-    response = render(UsersView, "user.json", user: user)
+    response = render(UserView, "user.json", user: user)
 
     assert %{
              user: %User{

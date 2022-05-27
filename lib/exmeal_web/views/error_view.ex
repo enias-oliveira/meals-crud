@@ -30,6 +30,10 @@ defmodule ExmealWeb.ErrorView do
     %{message: result}
   end
 
+  def render("user_404.json", _) do
+    %{message: "User not found"}
+  end
+
   def render("404.json", _) do
     %{errors: %{detail: "Not Found"}}
   end

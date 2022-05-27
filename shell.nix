@@ -4,11 +4,12 @@ with pkgs;
 let inherit (lib) optional optionals;
 
 in mkShell {
-  LOCALE_ARCHIVE_2_27 = "${glibcLocales}/lib/locale/locale-archive";
   buildInputs = [ (import ./nix/default.nix { inherit pkgs; }) niv ]
     ++ optional stdenv.isLinux inotify-tools
     ++ optional stdenv.isDarwin terminal-notifier ++ optionals stdenv.isDarwin
     (with darwin.apple_sdk.frameworks; [ CoreFoundation CoreServices ]);
+
+  LOCALE_ARCHIVE_2_27 = "${glibcLocales}/lib/locale/locale-archive";
 
   shellHook = ''
     export LANG="en_US.UTF-8"

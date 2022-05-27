@@ -4,39 +4,37 @@ defmodule ExmealWeb.UserController do
   alias Exmeal.Accounts
   alias Exmeal.User
 
-  action_fallback ExmealWeb.FallbackController
+  action_fallback(ExmealWeb.FallbackController)
 
   def index(conn, _params) do
     users = Accounts.list_users()
     render(conn, "index.json", users: users)
   end
 
-  def create(conn, %{"user" => user_params}) do
+  def create(conn, user_params) do
     with {:ok, %User{} = user} <- Accounts.create_user(user_params) do
       conn
       |> put_status(:created)
       |> put_resp_header("location", Routes.user_path(conn, :show, user))
-      |> render("show.json", user: user)
+      |> render("create_user.json", user: user)
     end
   end
 
   def show(conn, %{"id" => id}) do
-    user = Accounts.get_user!(id)
-    render(conn, "show.json", user: user)
+    case Accounts.get_user_by_id(id) do
+      {:ok, user} -> render(conn, "show.json", user: user)
+      error -> error
+    end
   end
 
-  def update(conn, %{"id" => id, "user" => user_params}) do
-    user = Accounts.get_user!(id)
-
-    with {:ok, %User{} = user} <- Accounts.update_user(user, user_params) do
-      render(conn, "show.json", user: user)
+  def update(conn, update_params) do
+    with {:ok, %User{} = user} <- Accounts.update_user(update_params) do
+      render(conn, "user.json", user: user)
     end
   end
 
   def delete(conn, %{"id" => id}) do
-    user = Accounts.get_user!(id)
-
-    with {:ok, %User{}} <- Accounts.delete_user(user) do
+    with {:ok, %User{}} <- Accounts.delete_user(id) do
       send_resp(conn, :no_content, "")
     end
   end

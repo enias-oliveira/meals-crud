@@ -4,7 +4,7 @@ defmodule Exmeal.User do
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
-  @derive {Jason.Encoder, only: [:id, :cpf, :email, :name, :meals]}
+  @derive {Jason.Encoder, only: [:id, :cpf, :email, :name]}
 
   schema "users" do
     field(:cpf, :string)

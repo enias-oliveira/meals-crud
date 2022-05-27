@@ -1,6 +1,50 @@
 {
   "excluded": [],
-  "failed": [
+  "failed": [],
+  "invalid": [],
+  "passed": [
+    {
+      "describe": "changeset/1",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/user_test.exs",
+      "line": 11,
+      "module": "Elixir.Exmeal.UserTest",
+      "test": "test changeset/1 when all params are valid, returns a valid changeset"
+    },
+    {
+      "describe": "Update Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/update_test.exs",
+      "line": 9,
+      "module": "Elixir.Exmeal.User.UpdateTest",
+      "test": "test Update Meal when a valid id is given, returns the meal"
+    },
+    {
+      "describe": "Update Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/update_test.exs",
+      "line": 25,
+      "module": "Elixir.Exmeal.User.UpdateTest",
+      "test": "test Update Meal when an invalid id is given, returns an error"
+    },
+    {
+      "describe": "Get User",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/get_test.exs",
+      "line": 9,
+      "module": "Elixir.Exmeal.Users.GetTest",
+      "test": "test Get User when a valid id is given, returns the user"
+    },
+    {
+      "describe": "Get User",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/get_test.exs",
+      "line": 25,
+      "module": "Elixir.Exmeal.Users.GetTest",
+      "test": "test Get User when an invalid id is given, returns an error"
+    },
+    {
+      "describe": "Delete user",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/delete_test.exs",
+      "line": 9,
+      "module": "Elixir.Exmeal.Users.DeleteTest",
+      "test": "test Delete user when a valid id is given, returns the user"
+    },
     {
       "describe": "Delete user",
       "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/delete_test.exs",
@@ -9,11 +53,144 @@
       "test": "test Delete user when an invalid id is given, returns an error"
     },
     {
-      "describe": "Delete user",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/delete_test.exs",
+      "describe": "Create User",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/create_test.exs",
+      "line": 6,
+      "module": "Elixir.Exmeal.Users.CreateTest",
+      "test": "test Create User when all params are valid, returns the user"
+    },
+    {
+      "describe": "Create User",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/create_test.exs",
+      "line": 21,
+      "module": "Elixir.Exmeal.Users.CreateTest",
+      "test": "test Create User when there are invalid params, returns an error"
+    },
+    {
+      "describe": "changeset/1",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/exmeal_test.exs",
       "line": 9,
-      "module": "Elixir.Exmeal.Users.DeleteTest",
-      "test": "test Delete user when a valid id is given, returns the user"
+      "module": "Elixir.Exmeal.MealTest",
+      "test": "test changeset/1 when all params are valid, returns a valid changeset"
+    },
+    {
+      "describe": "Update Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/update_test.exs",
+      "line": 5,
+      "module": "Elixir.Exmeal.Meals.UpdateTest",
+      "test": "test Update Meal when a valid id is given, returns the meal"
+    },
+    {
+      "describe": "Update Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/update_test.exs",
+      "line": 24,
+      "module": "Elixir.Exmeal.Meals.UpdateTest",
+      "test": "test Update Meal when an invalid id is given, returns an error"
+    },
+    {
+      "describe": "Create Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/create_test.exs",
+      "line": 5,
+      "module": "Elixir.Exmeal.Meals.CreateTest",
+      "test": "test Create Meal when all params are valid, returns the meal"
+    },
+    {
+      "describe": "Create Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/create_test.exs",
+      "line": 22,
+      "module": "Elixir.Exmeal.Meals.CreateTest",
+      "test": "test Create Meal when there are invalid params, returns an error"
+    },
+    {
+      "describe": "Get Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/get_test.exs",
+      "line": 5,
+      "module": "Elixir.Exmeal.Meals.GetTest",
+      "test": "test Get Meal when a valid id is given, returns the meal"
+    },
+    {
+      "describe": "Get Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/get_test.exs",
+      "line": 25,
+      "module": "Elixir.Exmeal.Meals.GetTest",
+      "test": "test Get Meal when an invalid id is given, returns an error"
+    },
+    {
+      "describe": "Delete Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/delete_test.exs",
+      "line": 5,
+      "module": "Elixir.Exmeal.Meals.DeleteTest",
+      "test": "test Delete Meal when a valid id is given, returns the meal"
+    },
+    {
+      "describe": "Delete Meal",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/delete_test.exs",
+      "line": 25,
+      "module": "Elixir.Exmeal.Meals.DeleteTest",
+      "test": "test Delete Meal when an invalid id is given, returns an error"
+    },
+    {
+      "describe": "delete/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 43,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test delete/2 when id exist, delete the meal"
+    },
+    {
+      "describe": "delete/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 53,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test delete/2 when id exist, delete the user"
+    },
+    {
+      "describe": "update/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 103,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test update/2 when not exist id, return an error"
+    },
+    {
+      "describe": "create/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 26,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test create/2 when there are invalid params, returns an error"
+    },
+    {
+      "describe": "update/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 107,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test update/2 when not exist id, return an error"
+    },
+    {
+      "describe": "get/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 116,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test get/2 when id exist, return the meal"
+    },
+    {
+      "describe": "create/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 32,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test create/2 when there are invalid params, returns an error"
+    },
+    {
+      "describe": "get/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 120,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test get/2 when id exist, return the meal"
+    },
+    {
+      "describe": "get/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 138,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test get/2 when id not exist, return an error"
     },
     {
       "describe": "get/2",
@@ -30,203 +207,11 @@
       "test": "test create/2 when all params are valid, creates a user"
     },
     {
-      "describe": "update/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 81,
-      "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test update/2 when id exist, update the user"
-    },
-    {
-      "describe": "delete/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 66,
-      "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test delete/2 when id not exist, return an error"
-    },
-    {
-      "describe": null,
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/views/user_view_test.exs",
-      "line": 32,
-      "module": "Elixir.ExmealWeb.UsersViewTest",
-      "test": "test render user.json"
-    },
-    {
-      "describe": null,
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/views/user_view_test.exs",
-      "line": 12,
-      "module": "Elixir.ExmealWeb.UsersViewTest",
-      "test": "test render create.json"
-    },
-    {
-      "describe": "get/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 120,
-      "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test get/2 when id exist, return the meal"
-    },
-    {
-      "describe": "update/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 107,
-      "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test update/2 when not exist id, return an error"
-    },
-    {
-      "describe": "create/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 32,
-      "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test create/2 when there are invalid params, returns an error"
-    }
-  ],
-  "invalid": [],
-  "passed": [
-    {
-      "describe": "changeset/1",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/user_test.exs",
-      "line": 11,
-      "module": "Elixir.Exmeal.UserTest",
-      "test": "test changeset/1 when all params are valid, returns a valid changeset"
-    },
-    {
-      "describe": "Update Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/update_test.exs",
-      "line": 25,
-      "module": "Elixir.Exmeal.User.UpdateTest",
-      "test": "test Update Meal when an invalid id is given, returns an error"
-    },
-    {
-      "describe": "Update Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/update_test.exs",
-      "line": 9,
-      "module": "Elixir.Exmeal.User.UpdateTest",
-      "test": "test Update Meal when a valid id is given, returns the meal"
-    },
-    {
-      "describe": "Create User",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/create_test.exs",
-      "line": 21,
-      "module": "Elixir.Exmeal.Users.CreateTest",
-      "test": "test Create User when there are invalid params, returns an error"
-    },
-    {
-      "describe": "Create User",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/create_test.exs",
-      "line": 6,
-      "module": "Elixir.Exmeal.Users.CreateTest",
-      "test": "test Create User when all params are valid, returns the user"
-    },
-    {
-      "describe": "Get User",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/get_test.exs",
-      "line": 25,
-      "module": "Elixir.Exmeal.Users.GetTest",
-      "test": "test Get User when an invalid id is given, returns an error"
-    },
-    {
-      "describe": "Get User",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/users/get_test.exs",
-      "line": 9,
-      "module": "Elixir.Exmeal.Users.GetTest",
-      "test": "test Get User when a valid id is given, returns the user"
-    },
-    {
-      "describe": "Create Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/create_test.exs",
-      "line": 22,
-      "module": "Elixir.Exmeal.Meals.CreateTest",
-      "test": "test Create Meal when there are invalid params, returns an error"
-    },
-    {
-      "describe": "Create Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/create_test.exs",
-      "line": 5,
-      "module": "Elixir.Exmeal.Meals.CreateTest",
-      "test": "test Create Meal when all params are valid, returns the meal"
-    },
-    {
-      "describe": "changeset/1",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/exmeal_test.exs",
-      "line": 9,
-      "module": "Elixir.Exmeal.MealTest",
-      "test": "test changeset/1 when all params are valid, returns a valid changeset"
-    },
-    {
-      "describe": "Delete Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/delete_test.exs",
-      "line": 25,
-      "module": "Elixir.Exmeal.Meals.DeleteTest",
-      "test": "test Delete Meal when an invalid id is given, returns an error"
-    },
-    {
-      "describe": "Delete Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/delete_test.exs",
-      "line": 5,
-      "module": "Elixir.Exmeal.Meals.DeleteTest",
-      "test": "test Delete Meal when a valid id is given, returns the meal"
-    },
-    {
-      "describe": "Update Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/update_test.exs",
-      "line": 24,
-      "module": "Elixir.Exmeal.Meals.UpdateTest",
-      "test": "test Update Meal when an invalid id is given, returns an error"
-    },
-    {
-      "describe": "Update Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/update_test.exs",
-      "line": 5,
-      "module": "Elixir.Exmeal.Meals.UpdateTest",
-      "test": "test Update Meal when a valid id is given, returns the meal"
-    },
-    {
-      "describe": "Get Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/get_test.exs",
-      "line": 25,
-      "module": "Elixir.Exmeal.Meals.GetTest",
-      "test": "test Get Meal when an invalid id is given, returns an error"
-    },
-    {
-      "describe": "Get Meal",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal/meals/get_test.exs",
-      "line": 5,
-      "module": "Elixir.Exmeal.Meals.GetTest",
-      "test": "test Get Meal when a valid id is given, returns the meal"
-    },
-    {
-      "describe": "delete/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 43,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test delete/2 when id exist, delete the meal"
-    },
-    {
-      "describe": "get/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 138,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test get/2 when id not exist, return an error"
-    },
-    {
       "describe": "create/2",
       "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
       "line": 5,
       "module": "Elixir.Exmeal.MealsControllerTest",
       "test": "test create/2 when all params are valid, creates a meal"
-    },
-    {
-      "describe": "delete/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 53,
-      "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test delete/2 when id exist, delete the user"
-    },
-    {
-      "describe": "update/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 73,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test update/2 when id exist, update the meal"
     },
     {
       "describe": "delete/2",
@@ -236,18 +221,39 @@
       "test": "test delete/2 when id not exist, return an error"
     },
     {
-      "describe": "get/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 116,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test get/2 when id exist, return the meal"
+      "describe": "delete/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 66,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test delete/2 when id not exist, return an error"
+    },
+    {
+      "describe": "update/2",
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 81,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test update/2 when id exist, update the user"
     },
     {
       "describe": "update/2",
       "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 103,
+      "line": 73,
       "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test update/2 when not exist id, return an error"
+      "test": "test update/2 when id exist, update the meal"
+    },
+    {
+      "describe": null,
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/views/user_view_test.exs",
+      "line": 12,
+      "module": "Elixir.ExmealWeb.UsersViewTest",
+      "test": "test render create.json"
+    },
+    {
+      "describe": null,
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/views/meals_test.exs",
+      "line": 10,
+      "module": "Elixir.ExmealWeb.MealsViewTest",
+      "test": "test render create.json"
     },
     {
       "describe": null,
@@ -258,24 +264,10 @@
     },
     {
       "describe": null,
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/views/meals_test.exs",
-      "line": 10,
-      "module": "Elixir.ExmealWeb.MealsViewTest",
-      "test": "test render create.json"
-    },
-    {
-      "describe": "create/2",
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 26,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test create/2 when there are invalid params, returns an error"
-    },
-    {
-      "describe": null,
-      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/views/error_view_test.exs",
-      "line": 11,
-      "module": "Elixir.ExmealWeb.ErrorViewTest",
-      "test": "test renders 500.json"
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/views/user_view_test.exs",
+      "line": 30,
+      "module": "Elixir.ExmealWeb.UsersViewTest",
+      "test": "test render user.json"
     },
     {
       "describe": null,
@@ -283,6 +275,13 @@
       "line": 7,
       "module": "Elixir.ExmealWeb.ErrorViewTest",
       "test": "test renders 404.json"
+    },
+    {
+      "describe": null,
+      "file": "/home/enias/projects/ignite/elixir/meals-crud/test/exmeal_web/views/error_view_test.exs",
+      "line": 11,
+      "module": "Elixir.ExmealWeb.ErrorViewTest",
+      "test": "test renders 500.json"
     }
   ],
   "skiped": []
